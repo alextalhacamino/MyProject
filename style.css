@@ -1,0 +1,1052 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #102747;
+    --blue: #183e68;
+    --red: #a62929;
+    --gold: #d9ad52;
+    --cream: #f8f5ee;
+    --white: #ffffff;
+    --text: #263445;
+    --muted: #687587;
+    --border: #e3e6eb;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    background: var(--white);
+    color: var(--text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #e9edf4;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 27px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            rgba(10, 27, 49, 0.92),
+            rgba(16, 39, 71, 0.87)
+        ),
+        linear-gradient(
+            135deg,
+            #102747,
+            #a62929
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+    animation: fadeUp 1s ease;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    color: #e4eaf2;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: var(--gold);
+    color: var(--navy);
+
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 85px 25px;
+}
+
+.section-light {
+    background: var(--cream);
+}
+
+.section-dark {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+}
+
+.section-dark .section-heading h2 {
+    color: var(--white);
+}
+
+.heading-line {
+    width: 75px;
+    height: 4px;
+    background: var(--red);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.section-description {
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.intro-text h3,
+.info-card h3 {
+    font-size: 24px;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+
+.intro-text p {
+    margin-bottom: 18px;
+}
+
+.info-card {
+    padding: 30px;
+    background: var(--cream);
+    border-left: 5px solid var(--red);
+    border-radius: 8px;
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-card li {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   PIO VALENZUELA PROFILE
+========================= */
+
+.profile-card {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(16, 39, 71, 0.06);
+}
+
+.profile-image {
+    min-width: 0;
+}
+
+.placeholder-image {
+    min-height: 300px;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        145deg,
+        #dfe4ea,
+        #b7c4d3
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: var(--navy);
+}
+
+.placeholder-image span {
+    font-family: Georgia, serif;
+    font-size: 75px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.placeholder-image p {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.placeholder-image small {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+.profile-content h3 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.profile-content p {
+    margin-bottom: 15px;
+}
+
+.fact-box {
+    padding: 15px;
+    background: #fdf7e8;
+    border-left: 4px solid var(--gold);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* =========================
+   MEMOIRS
+========================= */
+
+.memoir-card {
+    max-width: 950px;
+    margin: auto;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 30px rgba(16, 39, 71, 0.05);
+}
+
+.source-label {
+    display: inline-block;
+    background: #e9eff7;
+    color: var(--blue);
+
+    padding: 6px 12px;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.memoir-card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.memoir-card p {
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    background: var(--cream);
+    border-left: 5px solid var(--gold);
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.quote-box p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.quote-box span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   HISTORICAL ACCOUNT CARDS
+========================= */
+
+.account-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.account-card {
+    background: var(--white);
+    padding: 30px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(16, 39, 71, 0.08);
+}
+
+.account-number {
+    color: var(--red);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.account-card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.account-card p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--blue);
+    background: none;
+    border: none;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.read-more:hover {
+    color: var(--red);
+}
+
+.account-details {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================
+   COMPARISON TABLE
+========================= */
+
+.table-note,
+.small-note {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.small-note {
+    margin-top: 20px;
+}
+
+.table-container {
+    max-width: 1100px;
+    margin: auto;
+    overflow-x: auto;
+
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+thead {
+    background: var(--navy);
+    color: var(--white);
+}
+
+th,
+td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+th {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+tbody tr:hover {
+    background: #fdf7e8;
+}
+
+
+/* =========================
+   WHY ACCOUNTS CONFLICT
+========================= */
+
+.reason-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.reason-card {
+    padding: 25px;
+    background: #19385e;
+    border: 1px solid #315173;
+    border-radius: 9px;
+
+    transition: 0.3s;
+}
+
+.reason-card:hover {
+    background: #244a76;
+    transform: translateY(-4px);
+}
+
+.reason-icon {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.reason-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.reason-card p {
+    color: #d6dfeb;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    bottom: 10px;
+
+    width: 3px;
+    background: var(--gold);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 30px;
+
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-date {
+    color: var(--red);
+    font-weight: 800;
+    font-size: 15px;
+    text-align: right;
+    padding-top: 4px;
+}
+
+.timeline-content {
+    position: relative;
+    background: var(--white);
+
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.timeline-content::before {
+    content: "";
+
+    position: absolute;
+    left: -38px;
+    top: 26px;
+
+    width: 13px;
+    height: 13px;
+
+    background: var(--red);
+    border: 4px solid var(--cream);
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion-card {
+    max-width: 900px;
+    margin: auto;
+}
+
+.conclusion-card p {
+    margin-bottom: 20px;
+}
+
+.reflection-card {
+    max-width: 900px;
+    margin: 40px auto 0;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.reflection-card h3 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.reflection-card > p {
+    margin-bottom: 20px;
+}
+
+.reflection-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reflection-card textarea {
+    width: 100%;
+    resize: vertical;
+
+    padding: 15px;
+    border: 1px solid #cbd3df;
+    border-radius: 6px;
+
+    background: var(--white);
+    color: var(--text);
+
+    margin-bottom: 20px;
+}
+
+.reflection-card textarea:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--gold);
+}
+
+.reflection-message {
+    margin-top: 15px;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/* =========================
+   REFERENCES
+========================= */
+
+.references-card {
+    max-width: 950px;
+    margin: auto;
+
+    padding: 35px;
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.references-card h3 {
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.references-card ol {
+    padding-left: 25px;
+}
+
+.references-card li {
+    padding-left: 5px;
+    margin-bottom: 18px;
+}
+
+.references-card a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0a1b31;
+    color: var(--white);
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 23px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #d5dce7;
+    margin-bottom: 12px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    background: var(--red);
+    color: var(--white);
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    display: none;
+    z-index: 900;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background: var(--navy);
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .reason-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-top: 1px solid #315173;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 5px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 75px 20px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .intro-grid,
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .memoir-card {
+        padding: 25px;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-left: 25px;
+    }
+
+    .timeline-date {
+        text-align: left;
+    }
+
+    .timeline-content::before {
+        left: -32px;
+        top: 22px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .reflection-card,
+    .references-card {
+        padding: 22px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .account-card {
+        padding: 22px;
+    }
+}
+
+
+/* =========================
+   PRINT-FRIENDLY LAYOUT
+========================= */
+
+@media print {
+
+    header,
+    .btn,
+    .menu-toggle,
+    .read-more,
+    #backToTop,
+    .reflection-card textarea {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 20px 0;
+        break-inside: avoid;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 30px;
+        background: white;
+        color: black;
+    }
+
+    .hero h1,
+    .hero h1 span {
+        color: black;
+    }
+
+    .section-dark {
+        background: white;
+        color: black;
+    }
+
+    .section-dark .section-heading h2,
+    .reason-card h3 {
+        color: black;
+    }
+
+    .reason-card {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+    }
+
+    .reason-card p {
+        color: black;
+    }
+
+    .account-details[hidden] {
+        display: block !important;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
